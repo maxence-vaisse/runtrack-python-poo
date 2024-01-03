@@ -6,7 +6,7 @@ class Student: # Création de la classe Student
         self.__credit = credit # Création de l'attribut credit
         self.__level = self.__student_eval() # Création de l'attribut level
 
-    def __add_credits__(self, credit): # Création de la méthode add_credits avec l'attribut credit
+    def _add_credits(self, credit): # Création de la méthode add_credits avec l'attribut credit
         if isinstance(credit, int) and credit > 0: # Vérifie que l'attribut credit est un entier positif
             self.__credit += credit # Ajoute l'attribut credit à l'attribut credit
             self.__level = self.__student_eval() # Met à jour l'attribut level
@@ -14,7 +14,7 @@ class Student: # Création de la classe Student
             print("Le nombre de crédits doit être un entier positif.") # Affiche un message d'erreur
             exit(1) # Arrête le programme
 
-    def __get_credits__(self): # Création de la méthode get_credits
+    def _get_credits(self): # Création de la méthode get_credits
         return self.__credit # Retourne l'attribut credit
 
     def __student_eval(self): # Création de la méthode __student_eval
@@ -29,10 +29,10 @@ class Student: # Création de la classe Student
         else: # Si l'attribut credit est inférieur à 60
             return "Insuffisant" # Retourne "Insuffisant"
 
-    def __get_level__(self): # Création de la méthode get_level
+    def _get_level(self): # Création de la méthode get_level
         return self.__level # Retourne l'attribut level
 
-    def student_info(self): # Création de la méthode student_info
+    def _student_info(self): # Création de la méthode student_info
         print(f"Nom: {self.__nom}") # Affiche l'attribut nom
         print(f"Prénom: {self.__prenom}") # Affiche l'attribut prenom
         print(f"Identifiant: {self.__numetudiant}") # Affiche l'attribut numetudiant
@@ -40,9 +40,9 @@ class Student: # Création de la classe Student
 
 
 Student1 = Student("Doe", "John", 145, 30) # Création de l'objet Student1 avec les attributs nom, prenom, numetudiant et credit
-Student1.__add_credits__(10) # Ajoute 10 à l'attribut credit
-Student1.__add_credits__(15) # Ajoute 15 à l'attribut credit
-Student1.__add_credits__(5) # Ajoute 5 à l'attribut credit
-print(f"Le nombre de crédits de John Doe est de {Student1.__get_credits__()} points") # Affiche l'attribut credit
-print(f"La note de John Doe est {Student1.__get_level__()}") # Affiche l'attribut level
-Student1.student_info() # Affiche les attributs nom, prenom, numetudiant et level
+Student1._add_credits(10) # Ajoute 10 à l'attribut credit
+Student1._add_credits(15) # Ajoute 15 à l'attribut credit
+Student1._add_credits(5) # Ajoute 5 à l'attribut credit
+print(f"Le nombre de crédits de John Doe est de {Student1._get_credits()} points") # Affiche l'attribut credit
+print(f"La note de John Doe est {Student1._get_level()}") # Affiche l'attribut level
+Student1._student_info() # Affiche les attributs nom, prenom, numetudiant et level 
