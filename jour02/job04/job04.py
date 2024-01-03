@@ -4,12 +4,12 @@ class Student: # Création de la classe Student
         self.__prenom = prenom # Création de l'attribut prenom
         self.__numetudiant = numetudiant # Création de l'attribut numetudiant
         self.__credit = credit # Création de l'attribut credit
-        self.__level = self.__student_eval__() # Création de l'attribut level
+        self.__level = self.__student_eval() # Création de l'attribut level
 
     def __add_credits__(self, credit): # Création de la méthode add_credits avec l'attribut credit
         if isinstance(credit, int) and credit > 0: # Vérifie que l'attribut credit est un entier positif
             self.__credit += credit # Ajoute l'attribut credit à l'attribut credit
-            self.__level = self.__student_eval__() # Met à jour l'attribut level
+            self.__level = self.__student_eval() # Met à jour l'attribut level
         else: # Si l'attribut credit n'est pas un entier positif
             print("Le nombre de crédits doit être un entier positif.") # Affiche un message d'erreur
             exit(1) # Arrête le programme
@@ -17,7 +17,7 @@ class Student: # Création de la classe Student
     def __get_credits__(self): # Création de la méthode get_credits
         return self.__credit # Retourne l'attribut credit
 
-    def __student_eval__(self): # Création de la méthode __student_eval
+    def __student_eval(self): # Création de la méthode __student_eval
         if self.__credit >= 90: # Si l'attribut credit est supérieur ou égal à 90
             return "Excellent" # Retourne "Excellent"
         elif self.__credit >= 80: # Si l'attribut credit est supérieur ou égal à 80
@@ -39,7 +39,7 @@ class Student: # Création de la classe Student
         print(f"Niveau: {self.__level}") # Affiche l'attribut level
 
 
-Student1 = Student("Doe", "John", 145, 55) # Création de l'objet Student1 avec les attributs nom, prenom, numetudiant et credit
+Student1 = Student("Doe", "John", 145, 30) # Création de l'objet Student1 avec les attributs nom, prenom, numetudiant et credit
 Student1.__add_credits__(10) # Ajoute 10 à l'attribut credit
 Student1.__add_credits__(15) # Ajoute 15 à l'attribut credit
 Student1.__add_credits__(5) # Ajoute 5 à l'attribut credit
