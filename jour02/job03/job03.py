@@ -5,27 +5,27 @@ class Livre:
         self.__nbpages = nbpages
         self.__disponible = disponible
 
-    def __getTitre__(self):
+    def _getTitre(self):
         return self.__titre
 
-    def __getAuteur__(self):
+    def _getAuteur(self):
         return self.__auteur
 
-    def __getNbpages__(self):
+    def _getNbpages(self):
         return self.__nbpages
 
-    def __verification__(self):
+    def _verification(self):
         return self.__disponible
 
-    def __emprunter__(self):
-        if self.__verification__():
+    def _emprunter(self):
+        if self._verification():
             self.__disponible = False
             print("Le livre a été emprunté.")
         else:
             print("Le livre n'est pas disponible pour l'emprunt.")
 
     def __rendre__(self):
-        if not self.__verification__():
+        if not self._verification():
             self.__disponible = True
             print("Le livre a été rendu.")
         else:
@@ -34,9 +34,9 @@ class Livre:
 # Exemple d'utilisation
 print("Livre 1 :")
 Livre1 = Livre("Harry Potter", "J.K. Rowling", 300)
-print(Livre1.__getTitre__())
-print(Livre1.__getAuteur__())
-print(Livre1.__getNbpages__())
-Livre1.__emprunter__()
-Livre1.__verification__()
-Livre1.__verification__()
+print(Livre1._getTitre())
+print(Livre1._getAuteur())
+print(Livre1._getNbpages())
+Livre1._emprunter()
+Livre1._verification()
+Livre1._verification()
