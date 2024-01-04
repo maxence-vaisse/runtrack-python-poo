@@ -103,9 +103,6 @@ class Equipe:
                 joueur._setCartonsJaune(cartons_jaune)
                 joueur._setCartonsRouge(cartons_rouge)
 
-
-
-
 joueur1 = Joueur("Youssef", 1, "Gardien", 0, 0, 0, 0)
 joueur2 = Joueur("Manon", 2, "Défenseur", 0, 0, 0, 0)
 joueur3 = Joueur("Jean", 3, "Millieu", 0, 0, 0, 0)
@@ -115,7 +112,6 @@ equipe1._ajouterJoueur(joueur1)
 equipe1._ajouterJoueur(joueur2)
 equipe1._ajouterJoueur(joueur3)
 equipe1._ajouterJoueur(joueur4)
-
 
 joueur5 = Joueur("Rheda", 5, "Gardien", 0, 0, 0, 0)
 joueur6 = Joueur("Maxence", 6, "Défenseur", 0, 0, 0, 0)
