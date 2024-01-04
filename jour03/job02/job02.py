@@ -49,7 +49,7 @@ class CompteBancaire: # Création de la classe CompteBancaire
             print("Erreur : Le montant doit être supérieur à 0.") # Affichage d'une erreur
 
     def _agios(self, taux): # Méthode pour appliquer des agios sur le compte
-        self.__solde -= self.__solde * taux / 100 # Décrémentation de l'attribut privé solde
+        self.__solde += self.__solde * taux / 100 # Décrémentation de l'attribut privé solde
         self._afficherSolde() # Affichage du solde du compte
 
     def _virement(self, compte_destinataire, montant): # Méthode pour effectuer un virement vers un autre compte
@@ -78,5 +78,5 @@ compte1._afficherSolde() # Affichage du solde du compte1
 print("\n") # Saut de ligne
 
 compte2._afficherSolde() # Affichage du solde du compte2
-compte1._virement(compte2, 1000) # Virement de 1000 euros du compte1 vers le compte2
 compte2._agios(5) # Application d'agios de 5% sur le compte2
+compte1._virement(compte2, 10500) # Virement de 1000 euros du compte1 vers le compte2
