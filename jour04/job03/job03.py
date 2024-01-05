@@ -23,17 +23,18 @@ class Rectangle:
 
 class Parallelepipede(Rectangle):
     def __init__(self, longueur, largeur, hauteur):
-        super().__init__(longueur, largeur)
+        Rectangle.__init__(self, longueur, largeur)
         self.__hauteur = hauteur
 
     def volume(self):
         return self.__hauteur * self.getLongueur() * self.getLargeur()
 
-rectangle = Rectangle(5, 10)
+rectangle=Rectangle(5, 10)
 print(rectangle.perimetre())
 print(rectangle.surface())
 print(rectangle.getLongueur())
 print(rectangle.getLargeur())
 
-parallelepipede = Parallelepipede(5, 10, 15)
+parallelepipede=Parallelepipede(5, 10, 15)
+
 print(parallelepipede.volume())
